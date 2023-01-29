@@ -1,5 +1,10 @@
+<%= turbo_frame_tag "new-todo",  data: { turbo_frame: "new-todo" }  do %>
 <p style="color: green"><%= notice %></p>
 
+<div class="add_todo">
+  <%= link_to "Add New todo", new_todo_path %>
+</div>
+<% end %>
 <h1>Todos</h1>
 
 <div id="todos">
@@ -11,4 +16,3 @@
   <% end %>
 </div>
 
-<%= link_to "New todo", new_todo_path %>
